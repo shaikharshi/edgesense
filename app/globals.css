@@ -1,0 +1,327 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --accent: #0A66C2;
+  --secondary-color: #434343;
+  --tertiary-color: #EDF6FE;
+  --quaternary-color: #434343;
+
+
+  --h1: clamp(1.5rem, calc(1.5rem + ((1vw - 0.2rem) * 1.5)), 3rem);
+  --h2: clamp(1.375rem, calc(1.375rem + ((1vw - 0.2rem) * 0.875)), 2.25rem);
+  --h3: clamp(1.375rem, calc(1.375rem + ((1vw - 0.2rem) * 0.5)), 1.875rem);
+  --h4: clamp(1.125rem, calc(1.125rem + ((1vw - 0.1875rem) * 0.1235)), 1.25rem);
+  --h5: clamp(1.125rem, calc(1.125rem + ((1vw - 0.2rem) * 0.6329)), 1.75rem);
+  --h6: clamp(0.875rem, calc(0.875rem + ((1vw - 0.2rem) * 0.5063)), 1.375rem);
+  --p: clamp(1rem, calc(1rem + ((1vw - 0.2rem) * 0.125)), 1.125rem);
+  --font: clamp(1.25rem, calc(1.25rem + ((1vw - 0.1875rem) * 0.6173)), 1.875rem);
+  --span: clamp(1rem, calc(1rem + ((1vw - 0.1875rem) * 0.1235)), 1.125rem);
+
+}
+
+/* !Container */
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1100px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+/* !Container */
+
+
+.accent {
+  color: var(--accent);
+}
+
+.secondary {
+  color: var(--secondary);
+}
+
+.tertiary {
+  color: var(--tertiary-color);
+}
+
+.bg-gradient {
+  background: linear-gradient(0deg, #FFF 50%, #EDF6FE 100%);
+}
+
+.bg-blur-blue {
+  background: linear-gradient(90deg, #0A66C2 0%, #ffffff00 100%);
+}
+
+.right-blur-blue {
+  background: linear-gradient(90deg, #ffffff00 0%, #0A66C2 100%);
+}
+
+.blog-box-shadow {
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.10);
+}
+
+.news-letter-shadow {
+  box-shadow: 0px 0px 100px 0px rgba(0, 127, 240, 0.50);
+}
+
+.key-feature-shadow {
+  box-shadow: 0px 100px 200px 0px rgba(174, 217, 255, 0.20);
+}
+
+.smart-gateway-shadow {
+  background: linear-gradient(0deg, #FFF 50%, #EDF6FE 100%);
+}
+
+
+/* Global CSS or component-specific CSS */
+#introduction,
+#understanding-predictive-maintenance,
+#benefits,
+#implementing-predictive-maintenance,
+#conclusion {
+  scroll-margin-top: 250px;
+  /* Adjust based on the height of your navbar */
+}
+
+/* In your global CSS or component-specific CSS file */
+@media (max-width: 767px) {
+  .custom-rounded {
+    border-radius: 10px;
+    /* Zero radius for small screens */
+  }
+
+  .footer-radius {
+    border-radius: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .custom-rounded {
+    border-radius: 0 0 0.5rem 0;
+    /* Rounded bottom-right corner for medium screens and larger */
+  }
+
+  .footer-radius {
+    border-radius: 10px 0px 0px 10px;
+  }
+}
+
+
+
+/* global.css */
+
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.side-nav .nav-menu {
+  list-style: none;
+  width: 109%;
+  background-color: white;
+}
+
+.side-nav .nav-item {
+  position: relative;
+  padding: 10px 20px;
+}
+
+.nav-item:hover {
+  background-color: #0A66C2;
+}
+
+.nav-item:hover a {
+  color: white;
+}
+
+.nav-item a {
+  color: #434343;
+  font-size: var(--p);
+}
+
+/* Add this to your global stylesheet */
+.side-nav .nav-item:not(:first-child):hover::before {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  transition: 6s ease-in;
+  bottom: 100%;
+  right: 0;
+  height: 150%;
+  width: 20px;
+  border-bottom-right-radius: 25px;
+  box-shadow: 0 10px 0 0 #0A66C2;
+}
+
+
+.side-nav .nav-item:not(:last-child):hover::after {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  transition: 6s ease-in;
+  top: 100%;
+  right: 0;
+  height: 150%;
+  width: 20px;
+  border-top-right-radius: 25px;
+  box-shadow: 0 -20px 0 0 #0A66C2;
+}
+
+
+.masonry-grid {
+  column-count: 1;
+  column-gap: 1.5rem;
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry-grid {
+    column-count: 3;
+  }
+}
+
+
+.quaternary {
+  color: var(--quaternary-color)
+}
+
+.h1 {
+  font-size: var(--h1)
+}
+
+.h2 {
+  font-size: var(--h2);
+}
+
+.h3 {
+  font-size: var(--h3)
+}
+
+.h4 {
+  font-size: var(--h4)
+}
+
+.p {
+  font-size: var(--p);
+}
+
+.custom-box-shadow {
+  box-shadow: 0px 90px 100px 0px rgba(0, 0, 0, 0.05);
+  ;
+}
+
+.cus-box-shadow {
+  box-shadow: 0px 0px 4px 0px rgba(10, 102, 194, 0.25);
+}
+
+.navbar-shadow {
+  box-shadow: 0px 10px 20px 0px rgba(51, 51, 51, 0.10);
+}
+
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+  }
+}
+
+
+input[type="file"]::file-selector-button {
+  padding: 8px 16px;
+  color: white;
+  background: hsl(220.9, 39.3%, 11%);
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
